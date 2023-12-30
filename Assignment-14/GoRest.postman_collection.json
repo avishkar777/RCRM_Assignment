@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "a2d3672b-aa6a-4dce-97d1-8d5623c0c37d",
+		"name": "GoRest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "31606257"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "87a22d583a42d50b049eeb2eba444afa31c8f9bc2ef5e5b60d2e8c4f5e6b24ec"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"gorest20@gmail.com\",\r\n    \"gender\":\"male\",\r\n    \"status\":\"active\",\r\n    \"name\":\"BOT\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_uri}}/public/v2/users"
+			},
+			"response": []
+		},
+		{
+			"name": "Get user details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{base_uri}}//public/v2/users/5848148"
+			},
+			"response": []
+		},
+		{
+			"name": "Update user details",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"BOT_12\",\r\n    \"email\":\"5848066@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{base_uri}}/public/v2/users/5848066"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete user",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{base_uri}}/public/v2/users/5848066"
+			},
+			"response": []
+		},
+		{
+			"name": "Invalid Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {
+			"token": "87a22d583a42d50b049eeb2eba444afa31c8f9bc2ef5e5b60d2e8c4f5e6b24ec"
+		}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
